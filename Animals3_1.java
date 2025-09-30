@@ -1,0 +1,95 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package animals.pkg3;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Animals3_1 {
+
+    public static void main(String[] args) {
+        
+        final int NUM_OF_ANIMALS = 10;
+        List<Animal> animalFarm = new ArrayList<>();
+        // ------------------------------------------- Add pigs to farm
+        for (int i = 1; i <= NUM_OF_ANIMALS; i++) {
+            if (i % 2 == 0) {
+                String idValue = String.format("'US C475 %05d'", i);
+                int weightValue = Utils.getRandomInRange(Utils.COW_MIN_WEIGHT, Utils.COW_MAX_WEIGHT);
+                String soundValue = "moo";
+                Animal cow = new Cow(weightValue, idValue, soundValue);
+                animalFarm.add(cow);
+            } else {
+                String idValue = String.format("'BG S34 %03d'", i);
+                int weightValue = Utils.getRandomInRange(Utils.PIG_MIN_WEIGHT, Utils.PIG_MAX_WEIGHT);
+                String soundValue = "oink";
+                Animal pig = new Pig(weightValue, idValue, soundValue);
+                animalFarm.add(pig);
+            }
+        }
+        // ------------------------------------- Show pigs' information
+        for (Animal animal : animalFarm) {
+            System.out.println(animal);
+        }
+        // ------------------------------------------------------------
+    }
+
+}
+
+class Animal {
+
+    private String name;
+    protected int weight;
+    protected String id;
+    protected String sound;
+
+    public Animal(int weight, String id, String sound) {
+        // валидиране
+        this.weight = weight;
+        this.id = id;
+        this.sound = sound;
+    }
+
+    protected void setName(String value) {
+        name = value;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s with id: %s, weight: %3d, sound: %s",
+                name, id, weight, sound);
+    }
+}
+
+class Cow extends Animal {
+
+    public Cow(int weight, String id, String sound) {
+        super(weight, id, sound);
+        setName(this.getClass().getSimpleName());
+    }
+}
+
+class Pig extends Animal {
+
+    public Pig(int weight, String id, String sound) {
+        super(weight, id, sound);
+        setName(this.getClass().getSimpleName());
+    }
+}
+
+class Utils {
+
+    public final static int PIG_MIN_WEIGHT = 50;
+    public final static int PIG_MAX_WEIGHT = 350;
+    public final static int COW_MIN_WEIGHT = 408;
+    public final static int COW_MAX_WEIGHT = 725;
+
+    static int getRandomInRange(int start, int end) {
+        final Random generator = new Random();
+        return start + generator.nextInt(end - start + 1);
+    }
+}
