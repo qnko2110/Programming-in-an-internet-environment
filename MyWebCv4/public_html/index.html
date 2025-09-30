@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CV</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css"/>
+        <script src="libs/jquery-3.1.1.min.js"></script>
+        <script src="js/display.js"></script>
+        <script src="js/mycode.js"></script>
+        
+    </head>
+    <body>
+        <header>ИНФОРМАЦИЯ ЗА МЕН</header>
+        <main>
+            <section id="info-box">
+                <div id="info-picture">
+                    <img src="images/picture.png" id="picture" alt="Снимка"/>
+                </div>
+                <div id="info-text">
+                    Име и Фамилия<br/>
+                    Катедра, курс на обучение<br/>
+                    Допълнителна информация 1 ...<br/>
+                    Допълнителна информация 2 ...
+                </div>       
+            </section>
+            
+            <section id="login-box">
+                <div class="titleForm">Форма за авторизация</div>
+                <form id="loginForm" class="form" onsubmit="return login();">                   
+                    <div>
+                        <input type="text" name="username" 
+                               pattern=".{6,}" 
+                               title="Мининум 6 знака"
+                               placeholder="Име на потребител"
+                               required />
+                    </div>
+                    <div>
+                        <input type="password" name="password"
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                               placeholder="Парола на потребител" 
+                               title="Мининум 8 знака, числа и букви (малки и главни)!"
+                               required />
+                    </div>
+                    <div>
+                        <input type="submit" value="Изпрати"/>
+                    </div>
+                </form>
+            </section>
+            
+        </main>
+        
+        <footer>&copy;Име Фамилия, 2020</footer>
+    </body>
+</html>
