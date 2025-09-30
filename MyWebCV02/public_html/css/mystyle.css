@@ -1,0 +1,55 @@
+header{
+    color: white;
+    background-color: blue;
+    text-align: center;
+    font-size: 30px;
+}
+#login-box{
+    color: darkblue;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 30px;
+    height: 700px;
+    width: 100%;
+}
+#loginForm{
+    color: gray;
+    background-color: white;
+    text-align: center;
+    size: 50px;
+    width: 70%;
+    height:500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+input[type="text"], input[type="password"]{
+    height: 70px;
+    width: 200px;
+    border-bottom: 1px solid gray;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    font-size: 20px;   
+}
+input[type="text"]{
+    margin-bottom: 1rem;
+}
+input[type="password"]{
+    margin-bottom: 3rem;
+}
+input[type="submit"]{
+    height: 70px;
+    width: 200px;
+    border: 1px solid darkblue;
+    font-size: 20px;
+    color: darkblue;
+    background-color: white;
+}
+footer{
+    color: white;
+    background-color: blue;
+    text-align: center;
+    font-size: 30px;
+}
