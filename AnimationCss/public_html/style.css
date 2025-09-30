@@ -1,0 +1,23 @@
+#animation {
+    width: 128px;
+    height: 128px;
+    display: inline-block;
+    position: relative;
+    background: url('smurfs.png');
+    -webkit-animation: playX 0.5s steps(4) infinite, playY 2s steps(4) infinite;
+
+}
+
+@keyframes playX {
+    from { background-position-x: 0px;    
+    }
+    to { background-position-x: -512px;   
+    }
+}
+@keyframes playY {
+    from { background-position-y: 0px; 
+    }
+    to { background-position-y: -512px;      
+    }
+}
+
