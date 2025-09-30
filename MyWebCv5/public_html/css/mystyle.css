@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #000050;
+    height: 100%;
+}
+#container {
+    width: 600px;
+    margin: auto;
+    padding: 20px 0; 
+}
+main > section {
+    padding: 20px 5px;
+    background: #cccccc;
+}
+img {
+    width: 10%;
+    display: block;
+    margin: 0px auto;
+}
+.titleForm{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px;
+    color: #000060;
+}
+.form{
+    margin: 0 auto;
+    background: #eeeeee;
+    text-align: center;
+    padding: 10px;
+    color: #000050;
+    border-radius: 7px;
+    width: 70%;
+}
+input{
+    border: none;
+    box-shadow: none;
+    background: none;
+    outline: none;
+    color: #006000;
+    padding: 5px;
+    margin: 15px;
+    font: 1.25vmax 'Open Sans', sans-serif;
+    border-bottom: 2px solid gray;
+    transition: 0.5s ease-in;
+}
+input[type=text]{
+    color: #006000;
+}
+
+input:focus{
+    border-color: #000080;
+}
+
+input[type=submit]{
+    border: 1px solid #000050;
+    color: #000050;
+    padding: 5px 35px;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type=submit]:hover{
+    background: #bbbbbb;
+    transform: scale(1.0);
+    cursor: pointer;
+}
+#info-box, #error-box, #loading-box {
+    color: #000070;
+    text-align: center;
+    padding: 10px;
+    transition: 0.5s ease-in;
+}
+#info-itext {
+    font-size: 1.45vmax;
+}
+#loading-box {
+    background: #7CB3E9;
+}
+#info-box {
+    background: #7CB3E9;
+}
+#error-box {
+    background: #bfe6ff;
+    color: #dd0000;
+}
+
+header, footer {
+    background: #2C6399;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    font: 1.25vmax 'Open Sans', sans-serif;
+}
+
