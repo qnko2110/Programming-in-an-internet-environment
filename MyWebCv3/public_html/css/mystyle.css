@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000050;
+    height: 100%;
+}
+main > section {
+    padding: 20px 5px;
+    background: #cccccc;
+}
+img {
+    width: 10%;
+    margin: 0px auto;
+}
+#info-box {
+    color: #000070;
+    text-align: center;
+    padding: 10px;
+}
+#info-text {
+    font-size: 1.25vmax;
+}
+header, footer {
+    background: #2C6399;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font: 1.25vmax 'Open Sans', sans-serif;
+}
+
