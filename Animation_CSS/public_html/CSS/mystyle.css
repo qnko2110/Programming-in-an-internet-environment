@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17.11.2021, 09:04:19
+    Author     : User
+*/
+#animation {
+ width: 128px;
+ height: 128px;
+ background: url('../images/smurfs.png');
+ -webkit-animation: playX 0.25s steps(4) infinite, playY 1s steps(4) infinite;
+}
+@keyframes playX {
+ from { background-position-x: 0px; }
+ to { background-position-x: -512px; }
+}
+@keyframes playY {
+ from { background-position-y: 0px; }
+ to { background-position-y: -512px; }
+}
